@@ -13,7 +13,7 @@ def fetchImages(folder = CAM_FOLDER):
     imgList = []
     for i in os.listdir(folder):
         imageName = "img" + str(Sample.nextId) + ".png" 
-        image = Sample(name=imageName, ogPxValues=np.asarray(Image.open(folder + i)))
+        image = Sample(path=imageName, ogPxValues=np.asarray(Image.open(folder + i)))
         imgList.append(image)
         #imgList.append()
     return imgList
